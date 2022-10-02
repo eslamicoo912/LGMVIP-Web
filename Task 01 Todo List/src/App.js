@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import List from "./components/List";
 import "./App.css";
+import { v4 as uuid } from "uuid";
 
 const App = () => {
   const [task, setTaks] = useState("");
@@ -9,8 +10,14 @@ const App = () => {
 
   const addTask = (e) => {
     e.preventDefault();
-    setTasks([task, ...tasks]);
+    setTasks([{ id: uuid(), task }, ...tasks]);
+    console.log(tasks);
   };
+
+  const deleteClick = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <div className="app">
       <Header />
@@ -26,7 +33,7 @@ const App = () => {
           </button>
         </form>
       </div>
-      <List tasks={tasks} />
+      <List tasks={tasks} deleteClick={(id) => deleteClick(id)} />
     </div>
   );
 };

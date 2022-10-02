@@ -6,10 +6,11 @@ const List = ({ tasks, completedClick, editClick, deleteClick }) => {
     return (
       <Card
         key={index}
-        title={task}
-        completedClick={completedClick}
+        id={task.id}
+        title={task.task}
+        completedClick={(id) => completedClick(id)}
+        deleteClick={(id) => deleteClick(id)}
         editClick={editClick}
-        deleteClick={deleteClick}
       />
     );
   });
