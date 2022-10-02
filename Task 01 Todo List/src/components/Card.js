@@ -7,7 +7,7 @@ import {
 
 const Card = ({ title, completedClick, editClick, deleteClick }) => {
   return (
-    <div>
+    <div className="card">
       <div className="title">
         <p>{title}</p>
       </div>

@@ -14,7 +14,7 @@ const List = ({ tasks, completedClick, editClick, deleteClick }) => {
     );
   });
 
-  return <div>{tasksList}</div>;
+  return <div className="list">{tasksList}</div>;
 };
 
 export default List;
