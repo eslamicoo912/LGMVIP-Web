@@ -7,7 +7,7 @@ const List = ({ tasks, completedClick, editClick, deleteClick }) => {
       <Card
         key={index}
         id={task.id}
-        title={task.task}
+        task={task}
         completedClick={(id) => completedClick(id)}
         deleteClick={(id) => deleteClick(id)}
         editClick={editClick}

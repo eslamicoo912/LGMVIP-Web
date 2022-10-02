@@ -5,12 +5,22 @@ import "./App.css";
 import { v4 as uuid } from "uuid";
 
 const App = () => {
-  const [task, setTaks] = useState("");
+  const [task, setTask] = useState({ id: null, title: "", completed: false });
   const [tasks, setTasks] = useState([]);
+
+  const handleChange = (e) => {
+    setTask((task) => {
+      return {
+        ...task,
+        id: uuid(),
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
 
   const addTask = (e) => {
     e.preventDefault();
-    setTasks([{ id: uuid(), task }, ...tasks]);
+    setTasks([task, ...tasks]);
     console.log(tasks);
   };
 
@@ -24,9 +34,10 @@ const App = () => {
       <div className="input-container">
         <form onSubmit={addTask}>
           <input
+            name="title"
             type="text"
-            value={task}
-            onChange={(e) => setTaks(e.target.value)}
+            value={task.title}
+            onChange={handleChange}
           />
           <button className="add" type="submit">
             Add

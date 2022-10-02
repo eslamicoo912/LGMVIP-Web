@@ -5,11 +5,11 @@ import {
   MdOutlineDeleteForever,
 } from "react-icons/md";
 
-const Card = ({ id, title, completedClick, editClick, deleteClick }) => {
+const Card = ({ id, task, completedClick, editClick, deleteClick }) => {
   return (
-    <div className="card">
+    <div className={task.completed ? "card completed" : "card"}>
       <div className="title">
-        <p>{title}</p>
+        <p>{task.title}</p>
       </div>
       <div className="btns-container">
         <button className="completed" onClick={() => completedClick(id)}>
