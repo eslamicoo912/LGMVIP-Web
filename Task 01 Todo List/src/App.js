@@ -1,10 +1,14 @@
 import React from "react";
-import Card from "./components/Card";
+import Header from "./components/Header";
+import Input from "./components/Input";
+import List from "./components/List";
 
 const App = () => {
   return (
-    <div>
-      <Card />
+    <div className="app">
+      <Header />
+      <Input />
+      <List />
     </div>
   );
 };
