@@ -1,11 +1,78 @@
+body {
+  background-color: #505050;
+}
 .app {
   position: absolute;
   top: 45%;
-  left: 45%;
+  left: 40%;
   transform: translateX(-50%);
   transform: translateY(-50%);
 }
 
+form {
+  background-color: #a900d9;
+  padding: 80px;
+}
+
+form input {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+form input::placeholder {
+  color: white;
+  font-size: 14px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  background: #aae4fd;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.list {
+  background-color: #ddfcfe;
+}
+
+.task {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task p {
+  font-size: 20px;
+}
+
+.react-icons {
+  font-size: 1.5rem;
+}
+
+.complete-icon {
+  color: rgb(76, 225, 76);
+  padding: 0 15px;
+}
+
+.delete-icon {
+  color: red;
+}
+
 .completed {
   text-decoration: line-through;
+  background-color: #3970ef;
+  color: white;
+}
+
+.done {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
 }

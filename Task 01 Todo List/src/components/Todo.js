@@ -1,5 +1,6 @@
 import React from "react";
 import { MdDelete, MdDone } from "react-icons/md";
+import { IconContext } from "react-icons";
 
 const Todo = ({ todos, removeTask, completeTask }) => {
   return (
@@ -12,8 +13,16 @@ const Todo = ({ todos, removeTask, completeTask }) => {
               <p>{text}</p>
             </div>
             <div className="icons-container">
-              <MdDone onClick={() => completeTask(id)} />
-              <MdDelete onClick={() => removeTask(id)} />
+              <IconContext.Provider value={{ className: "react-icons" }}>
+                <MdDone
+                  className="complete-icon"
+                  onClick={() => completeTask(id)}
+                />
+                <MdDelete
+                  className="delete-icon"
+                  onClick={() => removeTask(id)}
+                />
+              </IconContext.Provider>
             </div>
           </div>
         );

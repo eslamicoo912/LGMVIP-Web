@@ -46,7 +46,7 @@ const List = () => {
     <div className="list">
       <Form addTask={addTask} />
       <Todo todos={todos} removeTask={removeTask} completeTask={completeTask} />
-      <p>Done: {countCompleted}</p>
+      <p className="done">Done: {countCompleted}</p>
     </div>
   );
 };

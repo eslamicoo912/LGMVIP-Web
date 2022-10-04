@@ -20,7 +20,13 @@ const Form = ({ addTask }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="text" type="text" onChange={handleChange} value={input} />
+      <input
+        name="text"
+        type="text"
+        onChange={handleChange}
+        value={input}
+        placeholder="type your task"
+      />
       <button>Add</button>
     </form>
   );
