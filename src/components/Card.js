@@ -7,7 +7,7 @@ import {
 
 const Card = ({ id, task, completedClick, editClick, deleteClick }) => {
   return (
-    <div className={task.completed ? "card completed" : "card"}>
+    <div className={task.completed ? "card completedTask" : "card"}>
       <div className="title">
         <p>{task.title}</p>
       </div>
