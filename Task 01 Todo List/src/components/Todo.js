@@ -1,5 +1,5 @@
 import React from "react";
-import { MdEdit, MdDelete, MdDone } from "react-icons/md";
+import { MdDelete, MdDone } from "react-icons/md";
 
 const Todo = ({ todos, removeTask, completeTask }) => {
   return (
@@ -12,7 +12,7 @@ const Todo = ({ todos, removeTask, completeTask }) => {
               <p>{text}</p>
             </div>
             <div>
-              <MdEdit onClick={() => completeTask(id)} />
+              <MdDone onClick={() => completeTask(id)} />
               <MdDelete onClick={() => removeTask(id)} />
             </div>
           </div>
