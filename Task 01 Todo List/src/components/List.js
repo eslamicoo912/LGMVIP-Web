@@ -28,7 +28,7 @@ const List = () => {
   return (
     <div>
       <Form addTask={addTask} />
-      <Todo todos={todos} />
+      <Todo todos={todos} removeTask={removeTask} completeTask={completeTask} />
     </div>
   );
 };

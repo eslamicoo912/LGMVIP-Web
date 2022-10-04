@@ -1,22 +1,19 @@
 import React from "react";
-import { MdEdit, MdDelete } from "react-icons/md";
+import { MdEdit, MdDelete, MdDone } from "react-icons/md";
 
-const Todo = ({ todos }) => {
+const Todo = ({ todos, removeTask, completeTask }) => {
   return (
     <div>
       {todos.map((todo, index) => {
+        const { id, text, isCompleted } = todo;
         return (
-          <div key={index}>
+          <div key={index} className={isCompleted ? "completed" : ""}>
             <div>
-              <p>{todo.text}</p>
+              <p>{text}</p>
             </div>
             <div>
-              <button>
-                <MdEdit />
-              </button>
-              <button>
-                <MdDelete />
-              </button>
+              <MdEdit onClick={() => completeTask(id)} />
+              <MdDelete onClick={() => removeTask(id)} />
             </div>
           </div>
         );
