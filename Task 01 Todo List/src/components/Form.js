@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 
-const Form = (props) => {
+const Form = ({ addTask }) => {
   const [input, setInput] = useState("");
 
   const handleChange = (e) => {
@@ -10,7 +10,7 @@ const Form = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTask({
+    addTask({
       id: uuid(),
       text: input,
       isCompleted: false,
