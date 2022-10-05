@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Card from "./components/Card";
 
 const URL = "https://reqres.in/api/users?page=1";
 
@@ -18,9 +19,13 @@ const App = () => {
     fetchData();
   }, []);
 
-  console.log(users);
-
-  return <div>App</div>;
+  if (loading) return <div>Loading...</div>;
+  return (
+    <div className="app">
+      <h1>Hello, users</h1>
+      <Card data={users} />
+    </div>
+  );
 };
 
 export default App;
