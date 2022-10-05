@@ -5,11 +5,15 @@ const Card = ({ data }) => {
     const { id, email, first_name, last_name, avatar } = user;
     return (
       <div className="card" key={index}>
-        <img src={avatar} alt={id} />
-        <h3>
-          {first_name} {last_name}
-        </h3>
-        <p>{email}</p>
+        <div className="img-container">
+          <img src={avatar} alt={id} />
+        </div>
+        <div className="info-container">
+          <h3>
+            {first_name} {last_name}
+          </h3>
+          <p>{email}</p>
+        </div>
       </div>
     );
   });
