@@ -100,35 +100,7 @@ const App = () => {
             value={img}
             onChange={handleChange}
           />
-          <div className="boxes">
-            <div className="field">
-              <label>Html</label>
-              <input
-                type="checkbox"
-                value="html"
-                name="html"
-                onChange={handleHtml}
-              />
-            </div>
-            <div className="field">
-              <label>Css</label>
-              <input
-                type="checkbox"
-                value="css"
-                name="languages"
-                onChange={handleCss}
-              />
-            </div>
-            <div className="field">
-              <label>Javascript</label>
-              <input
-                type="checkbox"
-                value="javascript"
-                name="languages"
-                onChange={handleJs}
-              />
-            </div>
-          </div>
+
           <div className="btns">
             <button className="submit" type="submit">
               Submit
